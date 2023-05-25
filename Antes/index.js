@@ -13,9 +13,11 @@ function compareNumbers() {
 
     if (userNumber > computerNumber) {
         document.getElementById('textOutput').innerHTML = 'Seu número é Maior.'
+        document.getElementById('inputBox').value = ''
     }
     else if (userNumber < computerNumber) {
         document.getElementById('textOutput').innerHTML = 'Seu número é Menor.'
+        document.getElementById('inputBox').value = ''
     }
     else {
         document.getElementById('textOutput').innerHTML = 'Acertou Miserável :)'
