@@ -1,5 +1,6 @@
 let computerNumber
 let userNumbers =[]
+let= tentativa = 0
 
 function init() {
    computerNumber = Math.floor(Math.random() * 100 +1)
