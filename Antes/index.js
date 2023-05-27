@@ -12,23 +12,26 @@ function compareNumbers() {
     userNumbers.push(' ' + userNumber)
     document.getElementById('guesses').innerHTML = userNumbers
 
-    if (userNumber > computerNumber) {
-        document.getElementById('textOutput').innerHTML = 'Seu número é Maior.'
-        document.getElementById('inputBox').value = ''
-        tentativa++
-        document.getElementById('tentativa').innerHTML = tentativa
+    if(attempts < maxguesses) {
 
+        if (userNumber > computerNumber) {
+            document.getElementById('textOutput').innerHTML = 'Seu número é Maior.'
+            document.getElementById('inputBox').value = ''
+            tentativa++
+            document.getElementById('tentativa').innerHTML = tentativa
+            }
+             else if (userNumber < computerNumber) {
+            document.getElementById('textOutput').innerHTML = 'Seu número é Menor.'
+            document.getElementById('inputBox').value = ''
+            tentativa++
+            document.getElementById('tentativa').innerHTML = tentativa
+            }
+            else {
+            document.getElementById('textOutput').innerHTML = 'Acertou Miserável :)'
+            tentativa++
+            document.getElementById('tentativa').innerHTML = tentativa
+            }
     }
-    else if (userNumber < computerNumber) {
-        document.getElementById('textOutput').innerHTML = 'Seu número é Menor.'
-        document.getElementById('inputBox').value = ''
-        tentativa++
-        document.getElementById('tentativa').innerHTML = tentativa
 
-    }
-    else {
-        document.getElementById('textOutput').innerHTML = 'Acertou Miserável :)'
-        tentativa++
-        document.getElementById('tentativa').innerHTML = tentativa
-    }
+
 }
