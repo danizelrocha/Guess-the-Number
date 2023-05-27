@@ -31,7 +31,8 @@ function compareNumbers() {
             document.getElementById('textOutput').innerHTML = 'Acertou Miserável :)'
             tentativa++
             document.getElementById('tentativa').innerHTML = tentativa
-            }
+            document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
+        }
     }
     else {
         document.getElementById('textOutput').innerHTML = 'Você perdeu :( ! O número do computador é ' + computerNumber
