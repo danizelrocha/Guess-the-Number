@@ -3,6 +3,10 @@ let userNumbers =[]
 let= tentativa = 0
 let maxguesses = 10
 
+function novoJogo() {
+    window.location.reload()
+}
+
 function init() {
    computerNumber = Math.floor(Math.random() * 100 +1)
    console.log(computerNumber)    
@@ -20,14 +24,14 @@ function compareNumbers() {
             document.getElementById('inputBox').value = ''
             tentativa++
             document.getElementById('tentativa').innerHTML = tentativa
-            }
-            else if (userNumber < computerNumber) {
+        }
+        else if (userNumber < computerNumber) {
             document.getElementById('textOutput').innerHTML = 'Seu número é Menor.'
             document.getElementById('inputBox').value = ''
             tentativa++
             document.getElementById('tentativa').innerHTML = tentativa
-            }
-            else {
+        }
+        else {
             document.getElementById('textOutput').innerHTML = 'Acertou Miserável :)'
             tentativa++
             document.getElementById('tentativa').innerHTML = tentativa
@@ -38,5 +42,4 @@ function compareNumbers() {
         document.getElementById('textOutput').innerHTML = 'Você perdeu :( ! O número do computador é ' + computerNumber
         document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
     }
-
 }
