@@ -1,6 +1,7 @@
 let computerNumber
 let userNumbers =[]
 let= tentativa = 0
+let maxguesses = 10
 
 function init() {
    computerNumber = Math.floor(Math.random() * 100 +1)
@@ -12,7 +13,7 @@ function compareNumbers() {
     userNumbers.push(' ' + userNumber)
     document.getElementById('guesses').innerHTML = userNumbers
 
-    if(attempts < maxguesses) {
+    if(tentativa < maxguesses) {
 
         if (userNumber > computerNumber) {
             document.getElementById('textOutput').innerHTML = 'Seu número é Maior.'
@@ -20,7 +21,7 @@ function compareNumbers() {
             tentativa++
             document.getElementById('tentativa').innerHTML = tentativa
             }
-             else if (userNumber < computerNumber) {
+            else if (userNumber < computerNumber) {
             document.getElementById('textOutput').innerHTML = 'Seu número é Menor.'
             document.getElementById('inputBox').value = ''
             tentativa++
@@ -32,6 +33,9 @@ function compareNumbers() {
             document.getElementById('tentativa').innerHTML = tentativa
             }
     }
-
+    else {
+        document.getElementById('textOutput').innerHTML = 'Você perdeu :( ! O número do computador é ' + computerNumber
+        document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
+    }
 
 }
