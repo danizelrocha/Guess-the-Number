@@ -21,7 +21,7 @@
   main {
     text-align: center;
     background: var(--background);
-    border: solid var(--red);
+    border: solid var(--gradient-2);
     border-width: 8px 8px 8px 8px;
     min-height: 40vh;
     border-radius: 2rem 2rem 2rem 2rem;
