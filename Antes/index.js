@@ -1,7 +1,7 @@
 let computerNumber
 let userNumbers =[]
 let= tentativa = 0
-let maxguesses = 10
+let maximotentativa = 10
 
 function novoJogo() {
     window.location.reload()
@@ -17,7 +17,7 @@ function compareNumbers() {
     userNumbers.push(' ' + userNumber)
     document.getElementById('guesses').innerHTML = userNumbers
 
-    if(tentativa < maxguesses) {
+    if(tentativa < maximotentativa) {
 
         if (userNumber > computerNumber) {
             document.getElementById('textOutput').innerHTML = 'Seu número é Maior.'
